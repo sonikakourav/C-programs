@@ -11,7 +11,7 @@ int main()
     if(n >= 1)
     {
         printf("\n\nFirst %d prime numbers are :  ", n);
-        printf("2 ");
+        printf("2");
     }
 
     // iteration for n prime numbers
@@ -26,9 +26,9 @@ int main()
                 
         }
 
-        if(c == i)  // c is prime
+        if(c == i)  
         {
-            printf("%d ", i);
+            printf("%d", i);
             count++;    // increment the count of prime numbers
         }
 
