@@ -15,5 +15,5 @@ int main()
     }
 
     printf("\n\n\n\n\t\t\tCoding is Fun !\n\n\n");
-    
+    Return 0;
 }
