@@ -17,8 +17,6 @@ long decimalToBinary(int decimalnum)
 
 int main()
 {
-    int decimalnum;
-    printf("Enter a Decimal Number: ");
     scanf("%d", &decimalnum);
     printf("Equivalent Binary Number is: %ld", decimalToBinary(decimalnum));
     return 0;
