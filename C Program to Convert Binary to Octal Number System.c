@@ -1,43 +1,26 @@
 #include <stdio.h>
 #include <math.h>
-//This function converts binary number to octal number
-int binaryToOctal(long binarynum)
+
+long decimalToBinary(int decimalnum)
 {
-    int octalnum = 0, decimalnum = 0, i = 0;
+    long binarynum = 0;
+    int rem, temp = 1;
 
-    /* This while loop converts binary number "binarynum" to the
-     * decimal number "decimalnum"
-     */
-    while(binarynum != 0)
+    while (decimalnum!=0)
     {
-        decimalnum = decimalnum + (binarynum%10) * pow(2,i);
-        i++;
-        binarynum = binarynum / 10;
+        rem = decimalnum%2;
+        decimalnum = decimalnum / 2;
+        binarynum = binarynum + rem*temp;
+        temp = temp * 10;
     }
-
-    //i is re-initialized
-    i = 1;
-
-    /* This loop converts the decimal number "decimalnum" to the octal
-     * number "octalnum"
-     */
-    while (decimalnum != 0)
-    {
-        octalnum = octalnum + (decimalnum % 8) * i;
-        i = i * 10;
-    }
-
-    //Returning the octal number that we got from binary number
-    return octalnum;
+    return binarynum;
 }
+
 int main()
 {
-    long binarynum;
-
-    printf("Enter a binary number: ");
-
-    // calling the function here
-    printf("Equivalent octal value: %d", binaryToOctal(binarynum));
-
+    int decimalnum;
+    printf("Enter a Decimal Number: ");
+    scanf("%d", &decimalnum);
+    printf("Equivalent Binary Number is: %ld", decimalToBinary(decimalnum));
     return 0;
 }
